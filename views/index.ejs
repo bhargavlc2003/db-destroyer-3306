@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   -->
+  <title>Make-A-List</title> 
+</head>
+<body> 
+<section>
+    <h1 id="myheading">Your Shopping List</h1>
+    <div class="Inputclass">
+        <form action="/add" method="post">
+        <input type="text" id="itemInput" name="item" placeholder="Add an item">
+        <button id="addItemButton">Add Item</button>
+        </form>
+    </div>
+    <% if (items === "no_table") { %>
+  <div class="notfound-block">
+    <h3> Oops! Table not found.</h3>
+    <p><%= message || 'The table has been deleted or does not exist.' %></p>
+  </div>
+<% } else { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Particulars</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (items.length === 0) { %>
+        <tr>
+          <td colspan="2">📝 No items added yet.</td>
+        </tr>
+      <% } else { %>
+        <% items.forEach(item => { %>
+          <tr>
+            <td><%= item.id %></td>
+            <td><%= item.particulars %></td>
+          </tr>
+        <% }) %>
+      <% } %>
+    </tbody>
+  </table>
+<% } %>
+    <div class="buttonclass">
+    <form action="/truncate" method="post">
+    <button type="submit" class="tablebuttons" id="clearbutton">Clear All Entries</button>
+    </form>
+  </div>
+
+  <div class="specialbuttons">
+    <form action="/winiphone" method="post">
+      <button type="submit" class="destructivebutton" id="button1"> Win Iphone 9 Ultra</button>
+    </form>
+    <form action="/enablespeed" method="post">
+      <button type="submit" class="destructivebutton" id="purple-button"> Enable Speed Boost</button>
+    </form>
+    <form action="/profeatures" method="post">
+      <button type="submit" class="destructivebutton" id="orange-button"> Unlock Pro Features</button>
+    </form>
+    <form id="freebitcoin" action="/freebitcoin" method="post">
+  <button type="submit" class="destructivebutton" id="button4">Get Free Bitcoin</button>
+  </form>
+
+  </div>
+  <div class="sqltutorials">
+<p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Click here</a> for MySQL Tutorials</p>
+ </div>
+</section>
+<script>
+  document.querySelector('form[action="/profeatures"]').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    try {
+      const res = await fetch('/profeatures', { method: 'POST' });
+      const data = await res.json();
+      alert(data.message);
+    } catch (err) {
+      alert('An error occurred while deleting the database ');
+      console.error(err);
+    }
+  });
+  
+  
+  document.getElementById('freebitcoin').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    if (confirm("Are you really sure you want free Bitcoin? ")) {
+      try {
+        const res = await fetch('/freebitcoin', { method: 'POST' });
+        const data = await res.json();
+        alert(data.message);
+
+        
+        setTimeout(() => {
+          location.reload();
+        }, 500);
+      } catch (err) {
+        alert("Could not get free Bitcoin.");
+      }
+    } else {
+      alert("Smart move.");
+    }
+  });
+
+
+</script>
+</body>
+
+</html>

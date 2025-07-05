@@ -1,0 +1,290 @@
+#myheading {
+  text-align: center;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.Inputclass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  margin-bottom: 30px;;
+}
+  
+#itemInput {
+  width: 700px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* position: relative;
+  justify-content: center; */
+}
+
+#addItemButton, #clearbutton {
+  padding: 10px 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#addItemButton:hover, #clearbutton:hover {
+  background-color: #218838;
+}
+.buttonclass{
+  margin-top: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.sqltutorials{
+  margin-top: 40px;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+
+
+}
+.specialbuttons{
+  margin-top: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+#button1 {
+  background: linear-gradient(90deg,rgba(255, 0, 0, 1) 0%, rgba(148, 52, 52, 1) 50%, rgba(105, 41, 38, 1) 100%);
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+}
+
+#button1:hover {
+  background: linear-gradient(to bottom right, #7b0000, #3a0000);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  transform: scale(1.03);
+}
+
+#button1:active {
+  transform: scale(0.95);
+  background-color: #2a0000;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+}
+#purple-button {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #ffffff;
+  border: 2px dashed #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px #8000ff;
+  font-family: "DynaPuff", system-ui;
+  /* font-family: 'Papyrus', fantasy; */
+}
+#purple-button:hover {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  box-shadow: 0 0 25px #8000ff;
+  transform: scale(1.05);
+}
+#orange-button {
+  background: linear-gradient(to bottom, #ffa500, #ff4500);
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff8c00;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+#orange-button:hover {
+  background: linear-gradient(to bottom, #ff4500, #ffa500);
+  box-shadow: 0 0 20px #ff4500;
+  transform: scale(1.05);
+}
+
+/* CSS */
+#button4 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#button4:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+#button4:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+/* Media queries */
+@media screen and (max-width: 35.5em) {
+  table {
+    display: block;
+  }
+  table > *,
+  table tr,
+  table td,
+  table th {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  tbody td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  tbody td:last-child {
+    margin-bottom: 0;
+  }
+
+  tbody td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+
+  tbody td:nth-child(1):before {
+    content: "Code";
+  }
+
+  tbody td:nth-child(2):before {
+    content: "Stock";
+  }
+
+  tbody td:nth-child(3):before {
+    content: "Cap";
+  }
+
+  tbody td:nth-child(4):before {
+    content: "Inch";
+  }
+
+  tbody td:nth-child(5):before {
+    content: "Box Type";
+  }
+}
+
+/* Table styles */
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+table * {
+  position: relative;
+}
+
+td,
+th {
+  padding-left: 8px;
+  text-align: left;
+}
+
+td.l,
+th.l {
+  text-align: right;
+}
+
+td.c,
+th.c,
+td.r,
+th.r {
+  text-align: center;
+}
+
+thead tr {
+  height: 60px;
+  background: #ffed86;
+  font-size: 16px;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+
+tbody tr:last-child {
+  border: 0;
+}
+
+/* Body style */
+body {
+  background: #9bc86a;
+  font: 400 14px 'Calibri', 'Arial';
+  padding: 20px;
+}
+
+/* Blockquote style */
+blockquote {
+  color: white;
+  text-align: center;
+}
+.notfound-block {
+  background-color: #3a3a3a;
+  color: #eee;
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: monospace;
+  /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); */
+  /* border: 2px dashed #ff4d4d; */
+}
